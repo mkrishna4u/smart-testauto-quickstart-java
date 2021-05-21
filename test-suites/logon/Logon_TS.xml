@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Logon-TestSuite" verbose="5"
+	thread-count="1">
+	<test name="Login-Logout-Tests">		
+		<classes>
+			<class name="smartfwk.testing.sample.gmail.features.logon.LoginGoogleEmailTest"/>
+		</classes>
+	</test>
+</suite>
