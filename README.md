@@ -44,11 +44,12 @@ NOTE: Test execution HTML reports are placed on the following directory:
 
 1.  Place cucumber features in cucumber-testcases/ directory
 2.  Place sikuli resources like images in sikuli-resources/ directory
-3.  Write page objects in src/main/java/<pacjage-name>/page_objects
-4.  Write validators code in src/main/java/<pacjage-name>/validators
-5.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java directory
-6.  Create test suites files in test-suites/ directory
-7.  To run the test suite file use the following command:
+3.  Place test data like excel files etc in test-data/ directory
+4.  Write page objects in src/main/java/<pacjage-name>/page_objects
+5.  Write validators code in src/main/java/<pacjage-name>/validators
+6.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java directory
+7.  Create test suites files in test-suites/ directory
+8.  To run the test suite file use the following command:
 
 	*   mvn clean verify -Dtest.suite.file=./test-suites/MainTestSuite.xml
 	
