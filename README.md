@@ -1,15 +1,15 @@
 # Quickstart Project to setup Software Testing Automation Environment (Based on Smart Testing Automation Framework)
 
-This is a maven based quickstart project to start working on sofwtare testing automation. If you have 10 minutes you can setup software testing environment and start writing the software testing automation related test cases. This quickstart project is based on **smart-testauto-fwk** library present on the following path: 
+This is a maven based quickstart project to start working on sofwtare testing automation. If you have 10 minutes you can setup software testing environment and start writing the software testing automation related test cases. This quickstart project is based on **smart-testauto-framework** library present on the following path: 
 
-	> smart-testauto-fwk
+	https://github.com/mkrishna4u/smart-testauto-framework
 	
 
 ## Steps to setup project environment:
 
 1.  Checkout both the projects on your computer
 
-	*   smart-testauto-fwk
+	*   smart-testauto-framework
 	*   smartfwk-testauto-quickstart
 
 2. Download Sikuli OCR Data files from the link <https://github.com/tesseract-ocr/tessdata_best> and place in **./test-config/sikuli-config/tessdata**
@@ -21,7 +21,7 @@ This is a maven based quickstart project to start working on sofwtare testing au
 		|- txt
 		|- etc..
 
-3. First compile the 'smart-testauto-fwk' project using command:
+3. First compile the 'smart-testauto-framework' project using command:
 
 > mvn clean install
 
