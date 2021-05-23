@@ -1,4 +1,4 @@
-package smartfwk.testing.sample.gmail.features.logon;
+package smartfwk.testing.sample.gmail.features.stepdefs.logon;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
