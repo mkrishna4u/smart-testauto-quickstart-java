@@ -1,3 +1,7 @@
+#
+# @Author Ajita Krishna
+#
+@LoginLogout
 Feature: Verify Google Email Login and Logout
 	Used to verify google email login/logout functionality.
 	

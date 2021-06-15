@@ -1,12 +1,18 @@
-package smartfwk.testing.sample.gmail.validators;
+package validators;
 
-import smartfwk.testing.sample.gmail.page_objects.GmailLoginPO;
-import smartfwk.testing.ui.core.config.AppConfig;
-import smartfwk.testing.ui.core.config.UserProfile;
-import smartfwk.testing.ui.core.config.webbrowser.WebBrowser;
-import smartfwk.testing.ui.core.objects.NewTextLocation;
-import smartfwk.testing.ui.core.objects.logon.LoginPageValidator;
+import org.uitnet.testing.smartfwk.ui.core.config.AppConfig;
+import org.uitnet.testing.smartfwk.ui.core.config.UserProfile;
+import org.uitnet.testing.smartfwk.ui.core.config.webbrowser.WebBrowser;
+import org.uitnet.testing.smartfwk.ui.core.objects.NewTextLocation;
+import org.uitnet.testing.smartfwk.ui.core.objects.logon.LoginPageValidator;
 
+import page_objects.GmailLoginPO;
+
+/**
+ * 
+ * @author Ajita Krishna
+ *
+ */
 public class GmailLoginPageValidator extends LoginPageValidator {
 
 	public GmailLoginPageValidator() {

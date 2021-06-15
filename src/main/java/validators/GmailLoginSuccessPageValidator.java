@@ -1,9 +1,15 @@
-package smartfwk.testing.sample.gmail.validators;
+package validators;
 
-import smartfwk.testing.sample.gmail.page_objects.GmailLoginSuccessPO;
-import smartfwk.testing.ui.core.config.webbrowser.WebBrowser;
-import smartfwk.testing.ui.core.objects.logon.LoginSuccessPageValidator;
+import org.uitnet.testing.smartfwk.ui.core.config.webbrowser.WebBrowser;
+import org.uitnet.testing.smartfwk.ui.core.objects.logon.LoginSuccessPageValidator;
 
+import page_objects.GmailLoginSuccessPO;
+
+/**
+ * 
+ * @author Ajita Krishna
+ *
+ */
 public class GmailLoginSuccessPageValidator extends LoginSuccessPageValidator {
 
 	public GmailLoginSuccessPageValidator() {

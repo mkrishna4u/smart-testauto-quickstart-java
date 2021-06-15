@@ -1,1 +1,1 @@
-call mvn clean verify -Dtest.suite.file=./test-suites/RegressionTestSuite.xml
+mvn -Dcucumber.filter.tags="@RegressionTest" clean verify

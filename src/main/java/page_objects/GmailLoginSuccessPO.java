@@ -1,10 +1,10 @@
-package smartfwk.testing.sample.gmail.page_objects;
+package page_objects;
 
-import smartfwk.testing.ui.core.commons.UIObjectType;
-import smartfwk.testing.ui.core.objects.ImageObject;
-import smartfwk.testing.ui.standard.domobj.ButtonSD;
-import smartfwk.testing.ui.standard.domobj.LabelSD;
-import smartfwk.testing.ui.standard.imgobj.WebPageTitleSI;
+import org.uitnet.testing.smartfwk.ui.core.commons.UIObjectType;
+import org.uitnet.testing.smartfwk.ui.core.objects.ImageObject;
+import org.uitnet.testing.smartfwk.ui.standard.domobj.ButtonSD;
+import org.uitnet.testing.smartfwk.ui.standard.domobj.LabelSD;
+import org.uitnet.testing.smartfwk.ui.standard.imgobj.WebPageTitleSI;
 
 public class GmailLoginSuccessPO {
 	public static final WebPageTitleSI LOGIN_SUCCESS_WEBPAGE_TITLE = new WebPageTitleSI("Login page title", 
