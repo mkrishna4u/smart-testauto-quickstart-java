@@ -38,20 +38,21 @@ NOTE: Test execution HTML reports are placed on the following directory:
 
 ## How to connect with relational database? 
 	1. Add particular JDBC library in pom.xml file 
-	2. Create a database profile in test-config/app-config/<app-name>/database-profiles directory
+	2. Create a database profile in test-config/apps-config/<app-name>/database-profiles directory
 
 ## Code writing instructions:
 
 1.  Place cucumber features in cucumber-testcases/ directory
 2.  Place sikuli resources like images in sikuli-resources/ directory
 3.  Place test data like excel files etc in test-data/ directory
-4.  Write page objects in src/main/java/<pacjage-name>/page_objects
-5.  Write validators code in src/main/java/<pacjage-name>/validators
-6.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java directory
-7.  Create test suites files in test-suites/ directory
-8.  To run the test suite file use the following command:
+4.  Write page objects in src/main/java/page_objects
+5.  Write validators code in src/main/java/validators
+6.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java/stepdefs/features directory
+8.  To run the regression test, use the following command:
 
-	*   mvn clean verify -Dtest.suite.file=./test-suites/MainTestSuite.xml
+	*   mvn -Dcucumber.filter.tags="@RegressionTest" clean verify
+	* OR
+	*   runRegressionTests.bat
 	
 NOTE: Test execution HTML reports are placed on the following directory:
 > test-results\cucumber-html-reports
