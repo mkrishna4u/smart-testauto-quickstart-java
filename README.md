@@ -10,7 +10,7 @@ This is a maven based quickstart project to start working on sofwtare testing au
 1.  Checkout both the projects on your computer
 
 	*   smart-testauto-framework
-	*   smartfwk-testauto-quickstart
+	*   smart-testauto-quickstart-java
 
 2. Download Sikuli OCR Data files from the link <https://github.com/tesseract-ocr/tessdata_best> and place in **./test-config/sikuli-config/tessdata**
 
