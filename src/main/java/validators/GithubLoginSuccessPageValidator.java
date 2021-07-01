@@ -3,16 +3,16 @@ package validators;
 import org.uitnet.testing.smartfwk.ui.core.config.webbrowser.WebBrowser;
 import org.uitnet.testing.smartfwk.ui.core.objects.logon.LoginSuccessPageValidator;
 
-import page_objects.GmailLoginSuccessPO;
+import page_objects.GithubHomePO;
 
 /**
  * 
  * @author Ajita Krishna
  *
  */
-public class GmailLoginSuccessPageValidator extends LoginSuccessPageValidator {
+public class GithubLoginSuccessPageValidator extends LoginSuccessPageValidator {
 
-	public GmailLoginSuccessPageValidator() {
+	public GithubLoginSuccessPageValidator() {
 		super(null, null);
 	}
 
@@ -24,18 +24,18 @@ public class GmailLoginSuccessPageValidator extends LoginSuccessPageValidator {
 
 	@Override
 	protected void tryLogout(String activeUserProfileName) {
-		GmailLoginSuccessPO.LABEL_ACCOUNT_DESC.getValidator(browser, null).click(15);
-		browser.waitForSeconds(2);
-		GmailLoginSuccessPO.BUTTON_SIGNOUT.getValidator(browser, null).click(10);
+		GithubHomePO.IMAGE_UserIcon.getValidator(browser, null).click(0);
+		browser.waitForSeconds(1);
+		GithubHomePO.MENU_Signout.getValidator(browser, null).click(0);
 	}
 
 	@Override
 	protected void validateInfo(String activeUserProfileName) {
-		GmailLoginSuccessPO.LABEL_ACCOUNT_DESC.getValidator(browser, null).validatePresent(15);
+		GithubHomePO.IMAGE_UserIcon.getValidator(browser, null).validatePresent(2);	
 	}
 
 	@Override
 	protected boolean checkLoginSuccessPageVisible(String activeUserProfileName) {
-		return GmailLoginSuccessPO.LABEL_ACCOUNT_DESC.getValidator(browser, null).isVisible(15);
+		return GithubHomePO.IMAGE_UserIcon.getValidator(browser, null).isPresent(2);
 	}
 }
