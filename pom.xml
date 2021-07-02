@@ -7,7 +7,7 @@
 	<artifactId>smartfwk-testauto-quickstart-java</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>Smart Testing Automation Framework - Quick Start / Sample Project</name>
+	<name>Smart Testing Automation Framework - Quick Start / Github Project</name>
 
 	<properties>
 		<smart-testauto-framework.version>1.0.0</smart-testauto-framework.version>
