@@ -32,7 +32,7 @@ public class HomeStepDefs {
 	 * Constructor
 	 */
 	public HomeStepDefs() {
-		uiTestHelper = new DefaultUITestHelper();		
+		uiTestHelper = DefaultUITestHelper.getInstance();		
 	}
 
 	@Before

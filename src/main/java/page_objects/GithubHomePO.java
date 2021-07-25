@@ -5,6 +5,11 @@ import org.uitnet.testing.smartfwk.ui.standard.domobj.ImageSD;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.LabelSD;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.TextBoxSD;
 
+/**
+ * 
+ * @author Ajita Krishna
+ *
+ */
 public interface GithubHomePO {
 
 	HyperlinkSD LINK_Notifications = new HyperlinkSD("Notifications", "//a[@data-target='notification-indicator.link']");
