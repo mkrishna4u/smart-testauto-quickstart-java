@@ -68,13 +68,13 @@ public class HomeStepDefs {
 			String item = cols.get(0);
 
 			if ("Notification Icon".equals(item)) {
-				GithubHomePO.LINK_Notifications.getValidator(browser, null).validatePresent(0);
+				GithubHomePO.LINK_Notifications.getValidator(browser, null).validatePresent(3);
 			} else if ("User Icon".equals(item)) {
-				GithubHomePO.IMAGE_UserIcon.getValidator(browser, null).validatePresent(0);
+				GithubHomePO.IMAGE_UserIcon.getValidator(browser, null).validatePresent(3);
 			} else if ("Repositories Label".equals(item)) {
-				GithubHomePO.LABEL_Repositories.getValidator(browser, null).validatePresent(0);
+				GithubHomePO.LABEL_Repositories.getValidator(browser, null).validatePresent(3);
 			} else if ("Find a repository Textbox".equals(item)) {
-				GithubHomePO.TEXTBOX_FindARepository.getValidator(browser, null).validatePresent(0);
+				GithubHomePO.TEXTBOX_FindARepository.getValidator(browser, null).validatePresent(3);
 			} else {
 				Assert.fail("No handling present for item '" + item + "'.");
 			}

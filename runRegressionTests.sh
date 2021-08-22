@@ -1,2 +1,3 @@
-mvn -Dcucumber.filter.tags="@RegressionTest" clean verify
+clear
+mvn clean verify -Dcucumber.filter.tags="@RegressionTest"
 

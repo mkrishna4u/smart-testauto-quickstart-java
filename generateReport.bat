@@ -1,1 +1,2 @@
-mvn -DskipTests=true verify
+cls
+mvn verify -DskipTests=true
