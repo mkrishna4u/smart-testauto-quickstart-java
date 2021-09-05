@@ -50,7 +50,7 @@ NOTE: Test execution HTML reports are placed on the following directory:
 6.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java/stepdefs/features directory
 8.  To run the regression test, use the following command:
 
-	*   mvn -Dcucumber.filter.tags="@RegressionTest" clean verify
+	*   mvn clean verify -Dcucumber.filter.tags="@RegressionTest"
 	* OR
 	*   runRegressionTests.bat
 	
