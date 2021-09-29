@@ -27,7 +27,7 @@ This is a maven based quickstart project to start working on sofwtare testing au
 
 4. Then run 'smartfwk-testauto-quickstart-java' project testcases using command:
 
-> mvn clean verify -Dtest.suite.file=test-suites/MainTestSuite.xml
+> mvn clean verify -Dcucumber.filter.tags="@RegressionTest"
 
 5. To generate only HTML reports, use the following commands:
 
