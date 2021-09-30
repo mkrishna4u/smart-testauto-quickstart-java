@@ -1,8 +1,8 @@
 package validators;
 
+import org.uitnet.testing.smartfwk.ui.core.appdriver.SmartAppDriver;
 import org.uitnet.testing.smartfwk.ui.core.config.AppConfig;
 import org.uitnet.testing.smartfwk.ui.core.config.UserProfile;
-import org.uitnet.testing.smartfwk.ui.core.config.webbrowser.WebBrowser;
 import org.uitnet.testing.smartfwk.ui.core.objects.NewTextLocation;
 import org.uitnet.testing.smartfwk.ui.core.objects.logon.LoginPageValidator;
 
@@ -21,34 +21,34 @@ public class GithubLoginPageValidator extends LoginPageValidator {
 	}
 
 	@Override
-	public void setInitParams(WebBrowser browser) {
-		this.browser = browser;
+	public void setInitParams(SmartAppDriver appDriver) {
+		this.appDriver = appDriver;
 	}
 
 	@Override
 	protected void tryLogin(String activeUserProfileName) {
-		AppConfig appConfig = browser.getAppConfig();
+		AppConfig appConfig = appDriver.getAppConfig();
 		UserProfile userProfile = appConfig.getUserProfile(activeUserProfileName);
-		
-		GithubMainPO.LINK_SignIn.getValidator(browser, null).click(5);
-		
-		GithubLoginPO.LABEL_SignInToGithub.getValidator(browser, null).validatePresent(5);
-		GithubLoginPO.TEXTBOX_UsernameOrEmailAddress.getValidator(browser, null).typeText(
-				userProfile.getAppLoginUserId(), NewTextLocation.replace, 0);
-		GithubLoginPO.TEXTBOX_Password.getValidator(browser, null).typeText(
-				userProfile.getAppLoginUserPassword(), NewTextLocation.replace, 0);
-		GithubLoginPO.BUTTON_SignIn.getValidator(browser, null).click(0);
-		
+
+		GithubMainPO.LINK_SignIn.getValidator(appDriver, null).click(5);
+
+		GithubLoginPO.LABEL_SignInToGithub.getValidator(appDriver, null).validatePresent(5);
+		GithubLoginPO.TEXTBOX_UsernameOrEmailAddress.getValidator(appDriver, null)
+				.typeText(userProfile.getAppLoginUserId(), NewTextLocation.replace, 0);
+		GithubLoginPO.TEXTBOX_Password.getValidator(appDriver, null).typeText(userProfile.getAppLoginUserPassword(),
+				NewTextLocation.replace, 0);
+		GithubLoginPO.BUTTON_SignIn.getValidator(appDriver, null).click(0);
+
 	}
 
 	@Override
 	protected void validateInfo(String activeUserProfileName) {
-		GithubMainPO.LINK_SignIn.getValidator(browser, null).validatePresent(2);	
+		GithubMainPO.LINK_SignIn.getValidator(appDriver, null).validatePresent(2);
 	}
 
 	@Override
 	public boolean checkLoginPageVisible(String activeUserProfileName) {
-		return GithubMainPO.LINK_SignIn.getValidator(browser, null).isPresent(2);
+		return GithubMainPO.LINK_SignIn.getValidator(appDriver, null).isPresent(2);
 	}
-	
+
 }
