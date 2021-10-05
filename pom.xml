@@ -10,7 +10,7 @@
 	<name>Smart Testing Automation Framework - Quick Start / Github Project</name>
 
 	<properties>
-		<smart-testauto-framework.version>2.0.0</smart-testauto-framework.version>
+		<smart-testauto-framework.version>2.0.1</smart-testauto-framework.version>
 		<cucumber.version>6.11.0</cucumber.version>
 		<selenium.version>4.0.0-rc-1</selenium.version>
 		<sikulix.version>2.0.5</sikulix.version>
