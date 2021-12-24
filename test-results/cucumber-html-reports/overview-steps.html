@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Smart Testing Automation Framework - Quick Start / Github Project</td>
+        <td>1</td>
+      <td>24 Dec 2021, 10:40</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.afterScenario(io.cucumber.java.Scenario)</td>
+              <td>3</td>
+              <td class="duration" data-value="201000000">0.201</td>
+              <td class="duration" data-value="201000000">0.294</td>
+              <td class="duration" data-value="603000000">0.603</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.beforeScenario(io.cucumber.java.Scenario)</td>
+              <td>3</td>
+              <td class="duration" data-value="263333333">0.263</td>
+              <td class="duration" data-value="263333333">0.632</td>
+              <td class="duration" data-value="790000000">0.790</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.close_the_web_appDriver()</td>
+              <td>1</td>
+              <td class="duration" data-value="622000000">0.622</td>
+              <td class="duration" data-value="622000000">0.622</td>
+              <td class="duration" data-value="622000000">0.622</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.from_the_menu_items_click_sign_out_on_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="839000000">0.839</td>
+              <td class="duration" data-value="839000000">0.839</td>
+              <td class="duration" data-value="839000000">0.839</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.home_page_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.navigate_to_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2755000000">2.755</td>
+              <td class="duration" data-value="2755000000">2.755</td>
+              <td class="duration" data-value="2755000000">2.755</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.the_filter_should_show_all_the_labels_which_contains_on_home_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="duration" data-value="133000000">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.the_user_clicks_on_user_icon_on_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="180000000">0.180</td>
+              <td class="duration" data-value="180000000">0.180</td>
+              <td class="duration" data-value="180000000">0.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.the_user_types_in_the_find_a_repository_textbox_present_on_home_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2486000000">2.486</td>
+              <td class="duration" data-value="2486000000">2.486</td>
+              <td class="duration" data-value="2486000000">2.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.user_is_already_logged_in_using_user_profile(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4071000000">4.071</td>
+              <td class="duration" data-value="4071000000">4.103</td>
+              <td class="duration" data-value="8142000000">8.142</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.user_login_using_user_profile(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="18924000000">18.924</td>
+              <td class="duration" data-value="18924000000">18.924</td>
+              <td class="duration" data-value="18924000000">18.924</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.verify_the_following_information_is_present_on_the_home_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2077000000">2.077</td>
+              <td class="duration" data-value="2077000000">2.077</td>
+              <td class="duration" data-value="2077000000">2.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefs.features.ui.home.HomeStepDefs.verify_the_login_page_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>13</td>
+            <td>18</td>
+            <td class="duration">2.087</td>
+            <td class="duration">18.924</td>
+            <td class="duration">37.569</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

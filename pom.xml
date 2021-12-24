@@ -10,11 +10,11 @@
 	<name>Smart Testing Automation Framework - Quick Start / Github Project</name>
 
 	<properties>
-		<smart-testauto-framework.version>2.0.2</smart-testauto-framework.version>
-		<cucumber.version>6.11.0</cucumber.version>
-		<selenium.version>4.0.0-rc-1</selenium.version>
+		<smart-testauto-framework.version>2.0.4</smart-testauto-framework.version>
+		<cucumber.version>7.1.0</cucumber.version>
+		<selenium.version>4.1.1</selenium.version>
 		<sikulix.version>2.0.5</sikulix.version>
-		<cucumber-reporting.version>5.5.4</cucumber-reporting.version>
+		<cucumber-reporting.version>5.6.1</cucumber-reporting.version>
 		<maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
