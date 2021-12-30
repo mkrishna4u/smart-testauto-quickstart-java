@@ -10,7 +10,7 @@
 	<name>Smart Testing Automation Framework - Quick Start / Github Project</name>
 
 	<properties>
-		<smart-testauto-framework.version>2.0.4</smart-testauto-framework.version>
+		<smart-testauto-framework.version>2.0.9</smart-testauto-framework.version>
 		<cucumber.version>7.1.0</cucumber.version>
 		<selenium.version>4.1.1</selenium.version>
 		<sikulix.version>2.0.5</sikulix.version>
@@ -93,7 +93,7 @@
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>5.5.0</version>
+				<version>${cucumber-reporting.version}</version>
 				<executions>
 					<execution>
 						<id>execution</id>
@@ -113,6 +113,7 @@
 							<mergeFeaturesById>false</mergeFeaturesById>
 							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
 							<checkBuildResult>false</checkBuildResult>
+							<skipEmptyJSONFiles>true</skipEmptyJSONFiles>
 						</configuration>
 					</execution>
 				</executions>

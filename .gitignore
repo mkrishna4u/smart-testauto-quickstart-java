@@ -2,3 +2,9 @@
 .settings
 /.classpath
 /.project
+screen-captures
+cucumber-html-reports
+cucumber-reports
+/test-results/cucumber-html-reports
+/test-results/cucumber-reports
+/test-results/screen-captures
