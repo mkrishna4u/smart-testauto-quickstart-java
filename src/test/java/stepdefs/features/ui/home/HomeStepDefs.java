@@ -34,7 +34,7 @@ public class HomeStepDefs {
 	 * Constructor
 	 */
 	public HomeStepDefs() {
-		appConnector = SmartAppConnector.connect(AppConstants.GITHUB_APP);		
+		appConnector = SmartAppConnector.connect(AppConstants.GITHUB_APP);	
 	}
 
 	@Before
