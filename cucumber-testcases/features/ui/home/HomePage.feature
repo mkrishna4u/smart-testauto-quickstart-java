@@ -27,7 +27,6 @@ Feature: Verify home page functionality.
 		Given User is already logged in using "StandardUserProfile-01" user profile.
 		When The user clicks on <User icon> on home page.
 		And From the menu items click <Sign out> on home page.
-		Then Verify the login page is displayed. 
-		And Close the web browser.
+		Then Verify the login page is displayed.
 
 

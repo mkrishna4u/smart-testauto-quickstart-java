@@ -1,58 +1,61 @@
-package stepdefs.features.ui.home;
+package stepdefs.features.ui;
 
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.uitnet.testing.smartfwk.ui.core.DefaultAppConnector;
-import org.uitnet.testing.smartfwk.ui.core.SmartAppConnector;
+import org.uitnet.testing.smartfwk.ui.core.AbstractAppConnector;
 import org.uitnet.testing.smartfwk.ui.core.appdriver.SmartAppDriver;
+import org.uitnet.testing.smartfwk.ui.core.cache.DefaultSmartCache;
+import org.uitnet.testing.smartfwk.ui.core.cache.SmartCache;
+import org.uitnet.testing.smartfwk.ui.core.cache.SmartCacheSubscriber;
 import org.uitnet.testing.smartfwk.ui.core.objects.NewTextLocation;
 
-import global.AppConstants;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page_objects.GithubHomePO;
-import page_objects.GithubMainPO;
 import page_objects.TopMenuPO;
 
 /**
+ * Step definitions for Home page.
  * 
  * @author Ajita Krishna
  *
  */
-public class HomeStepDefs {
-	private DefaultAppConnector appConnector;
+public class HomePageStepDefs {
+	// ------------- Common Code for step definition - START -------
+	private AbstractAppConnector appConnector;
 	private Scenario runningScenario;
 	private SmartAppDriver appDriver;
+	private SmartCache globalCache;
 
 	/**
 	 * Constructor
 	 */
-	public HomeStepDefs() {
-		appConnector = SmartAppConnector.connect(AppConstants.GITHUB_APP);	
+	public HomePageStepDefs() {
+		globalCache = DefaultSmartCache.getInstance();
+		
+		appConnector = globalCache.getAppConnector();
+		runningScenario = globalCache.getRunningScenario();
+		appDriver = globalCache.getAppDriver();
+				
+		// Subscribe to the the cache to get the latest data
+		globalCache.subscribe(new SmartCacheSubscriber() {
+			@Override
+			protected void onMessage(SmartCache message) {
+				appConnector = message.getAppConnector();
+				runningScenario = message.getRunningScenario();
+				appDriver = message.getAppDriver();
+			}
+		});
 	}
+	
+	// ------------- Common Code for step definition - END -------
 
-	@Before
-	public void beforeScenario(Scenario scenario) {
-		runningScenario = scenario;
-		appConnector.captureScreenshot(runningScenario, "scenario-started");
-	}
-
-	@After
-	public void afterScenario(Scenario scenario) {
-		appConnector.captureScreenshot(scenario, "scenario-" + scenario.getStatus());
-	}
-
-	@When("User login using {string} user profile.")
-	public void user_login_using_user_profile(String userProfileName) {
-		appDriver = appConnector.setActiveUserProfileName(userProfileName);
-	}
-
+	// ------------- Step definition starts here -----------------
+	
 	@Then("Home page is displayed.")
 	public void home_page_is_displayed() {
 		GithubHomePO.LINK_Notifications.getValidator(appDriver, null).validatePresent(5);
@@ -79,11 +82,6 @@ public class HomeStepDefs {
 			}
 		}
 
-	}
-
-	@Given("User is already logged in using {string} user profile.")
-	public void user_is_already_logged_in_using_user_profile(String userProfileName) {
-		appDriver = appConnector.setActiveUserProfileName(userProfileName);
 	}
 
 	@Given("Navigate to home page.")
@@ -121,15 +119,5 @@ public class HomeStepDefs {
 	@When("From the menu items click <Sign out> on home page.")
 	public void from_the_menu_items_click_sign_out_on_home_page() {
 		GithubHomePO.MENU_Signout.getValidator(appDriver, null).click(2);
-	}
-
-	@Then("Verify the login page is displayed.")
-	public void verify_the_login_page_is_displayed() {
-		GithubMainPO.LINK_SignIn.getValidator(appDriver, null).validatePresent(3);
-	}
-	
-	@Then("Close the web browser.")
-	public void close_the_web_appDriver() {
-		appDriver.closeApp();
 	}
 }

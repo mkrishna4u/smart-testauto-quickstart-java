@@ -1,4 +1,4 @@
-package stepdefs.features.ui.home;
+package stepdefs.features.ui;
 
 import org.testng.annotations.Listeners;
 
@@ -13,11 +13,11 @@ import io.cucumber.testng.CucumberOptions;
  */
 @CucumberOptions(
 	features = {
-			"cucumber-testcases/features/ui/home" }, 
+			"cucumber-testcases/features/ui" }, 
 	plugin = {"pretty", "json:test-results/cucumber-reports/json/HomeTest-results.json"}, 
-	glue = {"stepdefs.features.ui.home" }
+	glue = {"stepdefs.features.ui" }
 	)
 @Listeners(TestNGExecutionListener.class)
-public class HomeTest extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
 	
 }
