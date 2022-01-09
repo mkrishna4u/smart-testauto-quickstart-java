@@ -16,8 +16,8 @@
 		<sikulix.version>2.0.5</sikulix.version>
 		<cucumber-reporting.version>5.6.1</cucumber-reporting.version>
 		<maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 		<maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
 		<maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -72,8 +72,8 @@
 				<configuration>
 					<fork>true</fork>
 					<encoding>UTF-8</encoding>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 					<compilerArgument>-XDignore.symbol.file=true</compilerArgument>
 				</configuration>
 			</plugin>
@@ -83,10 +83,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven-surefire-plugin.version}</version>
 				<configuration>
-					<testFailureIgnore>false</testFailureIgnore>
-					<!-- <suiteXmlFiles>
-						<suiteXmlFile>${test.suite.file}</suiteXmlFile>
-					</suiteXmlFiles> -->
+					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
 
@@ -112,7 +109,7 @@
 							<parallelTesting>false</parallelTesting>
 							<mergeFeaturesById>false</mergeFeaturesById>
 							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
-							<checkBuildResult>false</checkBuildResult>
+							<checkBuildResult>true</checkBuildResult>
 							<skipEmptyJSONFiles>true</skipEmptyJSONFiles>
 						</configuration>
 					</execution>
