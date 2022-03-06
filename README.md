@@ -1,4 +1,4 @@
-# Quickstart Project to setup "Web Application (Non-Mobile platform)" Software Testing Automation Environment (Based on Smart Testing Automation Framework, Version 2.X.X)
+# Quickstart Project to setup "Web Application (Non-Mobile platform)" Software Testing Automation Environment (Based on Smart Testing Automation Framework, Version 3.X.X)
 
 This is a maven based quickstart project to start working on sofwtare testing automation. If you have 30 minutes (Based on your network speed) you can setup software testing environment and start writing the software testing automation related test cases. This quickstart project is based on **smart-testauto-framework** library present on the following path: 
 
@@ -58,11 +58,13 @@ F. If you would like to inspect the elements from web application to create page
 4.  Write page objects in src/main/java/page_objects
 5.  Write validators code in src/main/java/validators
 6.  Write test step definitions (*StepDefs.java) and test execution code (*Test.java) code in src/test/java/stepdefs/features directory
-7.  To run the regression test, use the following command:
+7.  To run the regression test, use the following command: (Default browser: Chrome)
 
 	*   mvn clean verify -Dcucumber.filter.tags="@RegressionTest"
 	 OR
 	*   runRegressionTests.bat
+8. To run the same same regression tests on **Firefox** web browser use the following command:
+	* mvn clean verify -Dcucumber.filter.tags="@RegressionTest" -Dapps.active.environment=github-app:FirefoxEnv
 	
 NOTE: Test execution HTML reports are placed on the following directory:
 > test-results\cucumber-html-reports
