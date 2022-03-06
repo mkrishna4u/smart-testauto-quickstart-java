@@ -65,6 +65,8 @@ F. If you would like to inspect the elements from web application to create page
 	*   runRegressionTests.bat
 8. To run the same same regression tests on **Firefox** web browser use the following command:
 	* mvn clean verify -Dcucumber.filter.tags="@RegressionTest" -Dapps.active.environment=github-app:FirefoxEnv
+
+(**FirefoxEnv.properties** file is present at the following location: **test-config/apps-config/github-app/environments/**)
 	
 NOTE: Test execution HTML reports are placed on the following directory:
 > test-results\cucumber-html-reports
