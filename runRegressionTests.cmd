@@ -1,3 +1,5 @@
+@echo off
 cls
 call set-env.cmd
-mvn clean verify -Dcucumber.filter.tags="@RegressionTest"
+set envName=%1
+if "%envName%"=="" ( mvn clean verify -Dcucumber.filter.tags="@RegressionTest" ) else ( mvn clean verify -Dcucumber.filter.tags="@RegressionTest" -Dapps.active.environment=github-app:%envName% )
