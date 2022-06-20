@@ -1,4 +1,4 @@
-# Quickstart Project to setup "Web Application (Non-Mobile platform)" Software Testing Automation Environment (Based on Smart Testing Automation Framework, Version 3.X.X)
+# Quickstart Project to setup "Web Application (Non-Mobile platform)" Software Testing Automation Environment (Based on Smart Testing Automation Framework, Version 5.X.X)
 
 This is a maven based quickstart project to start working on sofwtare testing automation. If you have 30 minutes (Based on your network speed) you can setup software testing environment and start writing the software testing automation related test cases. This quickstart project is based on **smart-testauto-framework** library present on the following path: 
 
@@ -29,7 +29,7 @@ B. Download Sikuli OCR Data files from the link <https://github.com/tesseract-oc
 
 C. Change the username and password of github application in the following path:
 
-	> test-config/apps-config/github-app/AppConfig.properties
+	> test-config/apps-config/github-app/AppConfig.yaml
 	
 D. Then run the following command to execute the test scenarios (Written in Cucumber).
 	
@@ -66,7 +66,7 @@ F. If you would like to inspect the elements from web application to create page
 8. To run the same same regression tests on **Firefox** web browser use the following command:
 	* mvn clean verify -Dcucumber.filter.tags="@RegressionTest" -Dapps.active.environment=github-app:FirefoxEnv
 
-(**FirefoxEnv.properties** file is present at the following location: **test-config/apps-config/github-app/environments/**)
+(**FirefoxEnv.yaml** file is present at the following location: **test-config/apps-config/github-app/environments/**)
 	
 NOTE: Test execution HTML reports are placed on the following directory:
 > test-results\cucumber-html-reports
