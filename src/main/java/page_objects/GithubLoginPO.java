@@ -1,7 +1,5 @@
 package page_objects;
 
-import org.uitnet.testing.smartfwk.ui.core.commons.UIObjectType;
-import org.uitnet.testing.smartfwk.ui.core.objects.ImageObject;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.ButtonSD;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.LabelSD;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.TextBoxSD;

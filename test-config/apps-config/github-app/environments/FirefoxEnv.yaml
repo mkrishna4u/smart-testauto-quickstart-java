@@ -1,0 +1,19 @@
+###########################################################################################################
+# Parameters written in this file will get overwritten / applied on AppConfig.properties file to 
+# setup a new environment. As part of creating new environment we can override any property in
+# AppConfig.properties file.
+#
+# NOTE2: To run the testcases for different environment, specify the following system property in 
+#        mvn command: -Dapps.active.environment=<AppName1>:<EnvironmentNameX>,<AppName2>:<EnvironmentNameY>
+#
+###########################################################################################################
+
+# Environment name
+environmentName: FirefoxEnv
+
+# Application Web Browser where all the test cases need to be executed. Applicable only for 'APPLICATION_TYPE = web-app'
+# Supported Web Browsers: firefox, chrome, edge, opera, safari, internet-explorer, remote-web-driver-provider, not-applicable
+appWebBrowser: firefox
+
+# APP Driver fonfig file name
+appDriverConfigFileName: AppDriver-firefox.yaml
