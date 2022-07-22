@@ -11,7 +11,7 @@
 
 	<properties>
 	    <parallel.threads>1</parallel.threads>
-		<smart-testauto-framework.version>5.0.0</smart-testauto-framework.version>
+		<smart-testauto-framework.version>5.0.3</smart-testauto-framework.version>
 		<cucumber.version>7.3.4</cucumber.version>
 		<selenium.version>4.2.2</selenium.version>
 		<sikulix.version>2.0.5</sikulix.version>

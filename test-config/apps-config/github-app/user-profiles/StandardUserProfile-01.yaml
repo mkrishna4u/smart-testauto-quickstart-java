@@ -19,8 +19,8 @@
 profileName: StandardUserProfile-01
 
 # Application User Credentials
-appLoginUserId: <enter-github-username>
-appLoginUserPassword: <enter-github-user-password>
+appLoginUserId: madhav.krishna@gmail.com
+appLoginUserPassword: ExpertGithub$@001
 
 # User account information
 userAccountType: StandardUser
