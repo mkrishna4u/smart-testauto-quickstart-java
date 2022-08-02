@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.uitnet.testing.smartfwk.remote_machine.AbstractRemoteMachineActionHandler;
+import org.uitnet.testing.smartfwk.remote_machine.SmartRemoteMachineManager;
 import org.uitnet.testing.smartfwk.ui.core.SmartCucumberUiScenarioContext;
 import org.uitnet.testing.smartfwk.ui.core.objects.NewTextLocation;
 
@@ -42,7 +44,9 @@ public class HomePageSteps {
 	public void verify_the_following_information_is_present_on_the_home_page(
 			io.cucumber.datatable.DataTable dataTable) {
 		List<List<String>> rows = dataTable.asLists();
-
+		AbstractRemoteMachineActionHandler handler = SmartRemoteMachineManager.getInstance().getActionHandler("github-app", "Sample-Machine");
+		System.out.println(handler);
+		
 		for (List<String> cols : rows) {
 			String item = cols.get(0);
 
