@@ -5,11 +5,6 @@ import org.uitnet.testing.smartfwk.ui.standard.domobj.LabelSD;
 import org.uitnet.testing.smartfwk.ui.standard.domobj.TextBoxSD;
 import org.uitnet.testing.smartfwk.ui.standard.imgobj.ImageSI;
 
-/**
- * 
- * @author Ajita Krishna
- *
- */
 public interface GithubLoginPO {
 	ImageSI IMG_GithubLoginIcon = new ImageSI("Sign in to GitHub Image", "SignInToGithubImage.jpg", null);
 	LabelSD LABEL_SignInToGithub = new LabelSD("Sign in to GitHub", "//h1[normalize-space()='Sign in to GitHub']");

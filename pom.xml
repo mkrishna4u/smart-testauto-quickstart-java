@@ -11,10 +11,10 @@
 
 	<properties>
 	    <parallel.threads>1</parallel.threads>
-		<smart-testauto-framework.version>5.1.0</smart-testauto-framework.version>
-		<cucumber.version>7.5.0</cucumber.version>
+		<smart-testauto-framework.version>5.1.1</smart-testauto-framework.version>
+		<!-- <cucumber.version>7.5.0</cucumber.version>
 		<selenium.version>4.3.0</selenium.version>
-		<sikulix.version>2.0.5</sikulix.version>
+		<sikulix.version>2.0.5</sikulix.version> -->
 		<cucumber-reporting.version>5.7.1</cucumber-reporting.version>
 		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -36,7 +36,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
@@ -47,7 +47,7 @@
 			<artifactId>cucumber-testng</artifactId>
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>net.masterthought</groupId>
@@ -121,7 +121,6 @@
 							<jsonFiles>
 								<param>**/*.json</param>
 							</jsonFiles>
-							<parallelTesting>true</parallelTesting>
 							<mergeFeaturesById>false</mergeFeaturesById>
 							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
 							<checkBuildResult>true</checkBuildResult>
@@ -145,7 +144,7 @@
 							<followSymlinks>false</followSymlinks>
 						</fileset>
 						<fileset>
-							<directory>${project.basedir}/terget</directory>
+							<directory>${project.basedir}/target</directory>
 							<followSymlinks>false</followSymlinks>
 						</fileset>
 					</filesets>
