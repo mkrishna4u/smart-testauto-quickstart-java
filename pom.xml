@@ -1,20 +1,47 @@
+<!-- 
+/*
+ * SmartTestAutoFramework / Smart-TestAuto-Studio
+ * Copyright 2021 and beyond
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @Author Madhav Krishna
+ */
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.uitnet.testing</groupId>
-	<artifactId>smartfwk-testauto-quickstart-java</artifactId>
-	<version>1.0.0</version>
+	<groupId>org.uitnet.testing.smartfwk</groupId>
+	<artifactId>Smart-TestAuto-Studio</artifactId>
+	<version>6.0.2</version>
 	<packaging>jar</packaging>
-	<name>Smart Testing Automation Framework - Quick Start / Github Project</name>
+	<name>Smart Testing Automation Studio</name>
+	<description>
+		Smart Testing Automation Studio is a one platform used to perform 
+		End-to-End testing for the configured software applications. it hides
+		all the complexities of the underlying softwares tools and provides easy
+		environment to develop automation testing scripts using your best 
+		suitable Java based code editor like Eclipse, Intellij IDEA etc. For more
+		details please refer our Github project: 
+		https://github.com/mkrishna4u/smart-testauto-framework
+	</description>
 
 	<properties>
 	    <parallel.threads>1</parallel.threads>
-		<smart-testauto-framework.version>5.1.1</smart-testauto-framework.version>
-		<!-- <cucumber.version>7.5.0</cucumber.version>
-		<selenium.version>4.3.0</selenium.version>
-		<sikulix.version>2.0.5</sikulix.version> -->
+		<smart-testauto-framework.version>6.0.2</smart-testauto-framework.version>
+		<smart-testauto-cucumber-stepdefs-en.version>6.0.2</smart-testauto-cucumber-stepdefs-en.version>
 		<cucumber-reporting.version>5.7.1</cucumber-reporting.version>
 		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -23,31 +50,26 @@
 		<maven.resources.plugin.version>3.3.0</maven.resources.plugin.version>
 		<maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>local-repository</id>
+			<url>file:///${project.basedir}/libs</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.uitnet.testing</groupId>
 			<artifactId>smart-testauto-framework</artifactId>
-			<version>${smart-testauto-framework.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-nop</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>${smart-testauto-framework.version}</version>			
 		</dependency>
-		<!-- <dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>${cucumber.version}</version>
-			<scope>test</scope>
-		</dependency>
+		
 		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>${cucumber.version}</version>
-			<scope>test</scope>
-		</dependency> -->
+			<groupId>org.uitnet.testing.smartfwk</groupId>
+			<artifactId>smart-testauto-cucumber-stepdefs-en</artifactId>
+			<version>${smart-testauto-cucumber-stepdefs-en.version}</version>			
+		</dependency>
 
 		<dependency>
 			<groupId>net.masterthought</groupId>
@@ -89,6 +111,7 @@
 					<threadCount>1</threadCount>
 					<redirectTestOutputToFile>false</redirectTestOutputToFile>
 					<disableXmlReport>true</disableXmlReport>
+					<argLine>-Xmx3g</argLine>
 					<properties>
 						<property>
 							<name>dataproviderthreadcount</name>

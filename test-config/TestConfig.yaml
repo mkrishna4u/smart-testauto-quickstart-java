@@ -18,13 +18,17 @@
 ################################################################################
 
 # Comma separated app names that will be used for running test scenarios.
-appNames: github-app
+appNames: github
 
-# PREFER_DRIVER_SCREENSHOTS valid values: true, false
+# preferDriverScreenshots valid values: true, false
 preferDriverScreenshots: true
 
 # embedScreenshotsInTestReport: valid values: true, false
 embedScreenshotsInTestReport: true
 
+# useDefaultStepDefsHooks valid values: true. false
+useDefaultStepDefsHooks: true
+
 # Additional properties (Define under additionalProps as child property)
 additionalProps:
+  
