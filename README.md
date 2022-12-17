@@ -1,4 +1,4 @@
-# Github Sample Automation using Smart Test Automation Studio (STAS)
+# WebApp Quickstart Project (Github) using Smart Test Automation Studio (STAS)
 This is a sample Web Application Automation project that uses STAS, that lists couple of scenarios for Github application.
 
 To run the sample test, follow the following steps:
@@ -8,4 +8,4 @@ To run the sample test, follow the following steps:
 	
 	> smart-runner.cmd run-regression-tests
 	
-	
+    After command execution, the report will be generated in test-results/ directory.
